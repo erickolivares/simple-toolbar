@@ -16,16 +16,18 @@ add_action( 'wp_enqueue_scripts', 'wpa85495_enqueue_style' );
 
 function simple_toolbar() {
 
+if ( is_user_logged_in() ) {
+
 //Current User EMail
     global $current_user;
     get_currentuserinfo();
     $email = $current_user->user_email;
-    $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+    $grav_url = "http://www.gravatar.com/avatar/" . md5(strtolower(trim($email))) . "?d=" . urlencode($default) . "&s=" . $size;
     ?>
 
     <nav class="admin-nav">
         <a href="/wp-admin/profile.php" target="_blank">
-            <li style="background-image: url('<?php echo $grav_url?>')">
+            <li style="background-image: url('<?php echo $grav_url ?>')">
             </li>
         </a>
         <a href="/wp-admin/" target="_blank">
@@ -47,7 +49,8 @@ function simple_toolbar() {
             </li>
         </a>
     </nav>
-
-<?php
+    
+    <?php
+    }
 }
 add_action('wp_footer','simple_toolbar');
