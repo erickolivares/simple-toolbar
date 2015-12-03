@@ -5,14 +5,15 @@ Plugin URI: http://www.erick-olivares.com
 Description: Plugin for utilizing a simple menu. It's a simple to solution for a cluttered toolbar.
 Author: Erick Olivares
 Version: 1.0
-Author URI: http://www.erick-olivares.com
+Author URI: http://www.erick-olivares.com/simple-toolbar-plugin/
 */
 
 function wpa85495_enqueue_style(){
-    wp_enqueue_style('simple-toolbar', WP_PLUGIN_URL . '/simple-toolbar/simple-toolbar.min.css', false );
+	wp_register_style( 'simple-toolbar', plugins_url( '/simple-toolbar.min.css', __FILE__ ), array(), '1', 'all' );
+
+    wp_enqueue_style( 'simple-toolbar' );
     wp_enqueue_style( 'prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array());
 }
-
 add_action( 'wp_enqueue_scripts', 'wpa85495_enqueue_style' );
 
 function simple_toolbar() {

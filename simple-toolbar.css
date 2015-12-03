@@ -12,7 +12,7 @@ nav.admin-nav li {
     background-position: center;
     list-style: none;
     background-color: #fff;
-    padding: 2px 10px;
+    padding: 8px 10px;
     font-size: 1.2em;
     border-top: 1px solid #3C3C3C;
     -webkit-box-sizing: border-box;
@@ -27,9 +27,15 @@ nav.admin-nav li:hover {
     background-color: #000;
     color: #ffffff;
 }
+nav.admin-nav li .fa:before {
+    color: #000000;
+}
+nav.admin-nav li:hover .fa:before { 
+    color: #ffffff;
+}
 nav.admin-nav li:hover nobr {
     width: auto;
-    padding: 2px 6px;
+    padding: 10px 6px;
     -webkit-transition: all, 200ms;
     -moz-transition: all, 200ms;
     -ms-transition: all, 200ms;
@@ -46,7 +52,7 @@ nav.admin-nav li nobr {
     font-size: .65em;
     display: inline-block;
     height: 100%;
-    padding: 2px 0px;
+    padding: 10px 0px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -56,6 +62,8 @@ nav.admin-nav li nobr {
     -o-transition: all, 200ms;
     transition: all, 200ms;
     width: 0;
+    font-family: 'Helvetica','Arial',sans-serif;
+
 }
 nav.admin-nav a:first-of-type li {
     border-top: 0;
