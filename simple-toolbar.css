@@ -37,7 +37,7 @@ nav.admin-nav li:hover nobr {
     transition: all, 200ms;
 }
 nav.admin-nav li nobr {
-    overflow: auto;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 36px;
