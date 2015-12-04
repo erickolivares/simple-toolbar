@@ -12,7 +12,8 @@ nav.admin-nav li {
     background-position: center;
     list-style: none;
     background-color: #fff;
-    padding: 8px 10px;
+    padding: 8px;
+    text-align: center;
     font-size: 1.2em;
     border-top: 1px solid #3C3C3C;
     -webkit-box-sizing: border-box;
